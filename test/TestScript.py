@@ -8,9 +8,9 @@ import math
 os.getcwd()
 os.chdir('C:/Users/Richard/OneDrive/My Documents/Machine Learning/kaggle/ames/')
 
-train = pd.read_csv('train.csv')
+train = pd.read_csv('train.csv', na_values='NA')
 print(train.head())
-test = pd.read_csv('test.csv')
+test = pd.read_csv('test.csv', na_values='NA')
 print(test.head())
 
 all_data = pd.concat((train.loc[:, 'MSSubClass':'SaleCondition'], test.loc[:, 'MSSubClass':'SaleCondition']))
