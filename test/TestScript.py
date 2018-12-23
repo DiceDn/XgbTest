@@ -57,7 +57,9 @@ print(predictions2.dtype)
 print(test.shape)
 print(predictions2.shape)
 
-submission = pd.DataFrame({'Id': test.Id, 'SalePrice': predictions2})
+#Set index to garentee Id is first column. Because dictionaries are unordered.
+#Index is automatically included as 1st column. To exclude ever use to_csv param.
+submission = pd.DataFrame({'Id': test.Id, 'SalePrice': predictions2}).set_index('Id')
 submission.to_csv('submssions.csv', index=False)
 
 
