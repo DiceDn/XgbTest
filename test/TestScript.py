@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 #bst = xgb.train(params, d_Train, num_boost_round=5000, watchlist=watchList) #early stopping rounds clearly needs a validation set passed via the watchlist.
 
 os.getcwd()
-os.chdir('C:/Users/Richard/OneDrive/My Documents/Machine Learning/kaggle/ames/')
+os.chdir('C:/Users/Hoc/OneDrive/My Documents/Machine Learning/kaggle/ames/')
 
 train = pd.read_csv('train.csv', na_values='NA')
 print(train.head())
